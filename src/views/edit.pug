@@ -1,0 +1,9 @@
+extends templates/layout
+
+block content
+  h4 Change Title of video
+  form(method="POST")
+    input(name="title", placeholder="Video Title", value=video.title, required, maxLength=80)
+    input(name="description", placeholder="Description", value=video.description, type="text", required, minLength=20)
+    input(name="hashtags", placeholder="Hashtags, separated by comma.", value=video.hashtags.join(), required, type="text")
+    input(value="Save",type="submit")
