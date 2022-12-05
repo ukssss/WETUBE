@@ -8,8 +8,9 @@
     "npm": "7.20.3"
   },
   "scripts": {
-    "start": "node ",
-    "start:dev": "nodemon init.js",
+    "start": "node build/init.js",
+    "build:server": "babel src -d build",
+    "dev:server": "nodemon init.js",
     "dev:assets": "webpack"
   },
   "author": "ukss",
@@ -30,7 +31,8 @@
     "regenerator-runtime": "^0.13.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.6",
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.5",
     "@babel/node": "^7.20.0",
     "@babel/preset-env": "^7.19.4",
     "babel-loader": "^9.1.0",
